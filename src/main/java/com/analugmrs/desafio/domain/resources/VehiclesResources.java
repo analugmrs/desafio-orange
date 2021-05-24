@@ -87,7 +87,9 @@ public class VehiclesResources {
         {
             return true;
         }
-        throw new ErrorException(HttpStatus.BAD_REQUEST, "Invalid week day");
+        else{
+            return false;
+        }
     }
 
     private String casterDay(String year) throws ErrorException {
