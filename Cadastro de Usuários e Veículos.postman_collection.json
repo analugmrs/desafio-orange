@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "5bc82162-17ac-4829-b1a0-f9accc559927",
+		"name": "Cadastro de Usuários e Veículos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastro Usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"FAKE 2\",\r\n    \"email\": \"fake2@fake2.com\",\r\n    \"cpf\": \"22222222222\",\r\n    \"birthDate\": \"22/22/2222\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastro Veículo 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\": \"Audi\",\r\n    \"model\": \"A3 1.6 5p Aut.\",\r\n    \"year\": \"2003 Gasolina\",\r\n    \"cpfOwner\": \"22222222222\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastro Veículo 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\": \"VW - VolksWagen\",\r\n    \"model\": \"AMAROK CD2.0 16V/S CD2.0 16V TDI 4x2 Die\",\r\n    \"year\": \"2013 Diesel\",\r\n    \"cpfOwner\": \"22222222222\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca Usuário com Lista de Veículos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\": \"Audi\",\r\n    \"model\": \"A3 1.6 5p Aut.\",\r\n    \"year\": 2002,\r\n    \"cpfOwner\": 12233905601\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/22222222222/vehicles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"22222222222",
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
